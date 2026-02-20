@@ -34,6 +34,17 @@ namespace Uveghazrendszer
 			}
 		}
 
+
+		public override bool Equals(object obj)
+		{
+			obj = obj as NovenyFaj;
+			if (this.nev == ((NovenyFaj)(obj)).nev)
+			{
+				return true;
+			}
+			return false;
+		}
+
 		public override string ToString()
 		{
 			return $"{this.nev} nedvesség: {this.nedvessegtartalom} egészség: {this.egeszsegSzint} ideális egyedszám: {this.optimalisSuruseg}";
